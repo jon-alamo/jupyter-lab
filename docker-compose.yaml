@@ -1,0 +1,9 @@
+version: '3.7'
+
+services:
+  jupyterlab:
+    image: my_jupyterlab_image
+    platform: linux/amd64
+    container_name: jupyter-joni
+    ports:
+      - "8888:8888"
