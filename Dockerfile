@@ -68,6 +68,7 @@ RUN chmod +x /usr/local/bin/before-notebook.d/startup.sh
 
 # Copy README to work directory
 COPY README.ipynb ${NB_PREFIX}/work/README.ipynb
+COPY README.ipynb ${NB_PREFIX}/work/readme.py
 
 EXPOSE 8888
 
