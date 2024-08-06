@@ -1,5 +1,5 @@
 # Usar la imagen base de Python
-FROM python:3.10
+FROM python:3.12
 
 USER root
 
