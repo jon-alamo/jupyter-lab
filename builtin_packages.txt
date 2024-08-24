@@ -13,7 +13,7 @@ voila-gridstack
 python-dotenv
 requests
 jupyterlab-link-share
-gpt_jupyterlab
+jupyter-ai
 git+https://github.com/farizrahman4u/loopgpt.git@main
 gitpython
 ipycanvas
