@@ -40,14 +40,14 @@ RUN mkdir -p ${NB_PREFIX} && chown -R ${NB_USER}:${NB_USER} ${NB_PREFIX}/..
 
 RUN apt-get update && apt-get install -y jq
 
-RUN GVERSION=$(curl --silent "https://api.github.com/repos/mozilla/geckodriver/releases/latest" | jq -r '.tag_name') \
-    && wget "https://github.com/mozilla/geckodriver/releases/download/$GVERSION/geckodriver-$GVERSION-linux64.tar.gz"     \
-    && tar -xf "geckodriver-$GVERSION-linux64.tar.gz"     \
-    && mv geckodriver /usr/local/bin     \
-    && rm geckodriver*.tar.gz
-
-# Instalar Selenium
-RUN pip install -U selenium
+#RUN GVERSION=$(curl --silent "https://api.github.com/repos/mozilla/geckodriver/releases/latest" | jq -r '.tag_name') \
+#    && wget "https://github.com/mozilla/geckodriver/releases/download/$GVERSION/geckodriver-$GVERSION-linux64.tar.gz"     \
+#    && tar -xf "geckodriver-$GVERSION-linux64.tar.gz"     \
+#    && mv geckodriver /usr/local/bin     \
+#    && rm geckodriver*.tar.gz
+#
+## Instalar Selenium
+#RUN pip install -U selenium
 
 COPY builtin_packages.txt /tmp/builtin_packages.txt
 RUN pip install -r /tmp/builtin_packages.txt
