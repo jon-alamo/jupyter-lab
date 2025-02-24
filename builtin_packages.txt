@@ -1,7 +1,7 @@
 jupyterlab
 jupyterhub
-#nbformat
-#nbconvert
+nbformat
+nbconvert
 psycopg2-binary
 sqlalchemy
 pandas
